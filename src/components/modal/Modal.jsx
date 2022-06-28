@@ -23,7 +23,7 @@ class Modal extends Component {
                   name="startTime"
                   className="event-form__field"
                   onChange={this.handleChange}
-                />
+                />l
                 <span>-</span>
                 <input
                   type="time"
