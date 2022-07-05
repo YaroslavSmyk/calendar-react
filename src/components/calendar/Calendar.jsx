@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from '../modal/Modal';
 
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
@@ -17,8 +18,11 @@ class Calendar extends Component {
 
     return (
       <section className="calendar">
+        {!this.props.onModal ? null : (
+          <Modal handleDeletefModal={this.props.handleDeletefModal} />
+        )}
         <Navigation weekDates={weekDates} />
-        <div className="calendar__body">
+        <div className="calendar__body" onClick={this.props.handleOnModal}>
           <div className="calendar__week-container">
             <Sidebar />
             <Week weekDates={weekDates} events={this.state.events} />
