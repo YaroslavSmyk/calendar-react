@@ -4,28 +4,64 @@ import Modal from '../modal/Modal';
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
 import Sidebar from '../sidebar/Sidebar';
-import events from '../../gateway/events';
-
+// import events from '../../gateway/events';
+import {
+  fetchEventsList,
+  onCreateEvent,
+  onDeleteEvent,
+  // fetchEventsList,
+  // onDeleteEvent,
+} from '../../gateway/eventGateway.jsx';
 import './calendar.scss';
 
 class Calendar extends Component {
   state = {
-    events,
+    events: [],
+  };
+
+  fetchEvents = () => {
+    fetchEventsList()
+      .then((eventsList) =>
+        this.setState({
+          events: eventsList.map((event) => ({
+            ...event,
+            dateFrom: new Date(event.dateFrom),
+            dateTo: new Date(event.dateTo),
+          })),
+        })
+      )
+      .catch(() => alert('Server Error'));
+  };
+
+  componentDidMount() {
+    this.fetchEvents();
+  }
+
+  createEvent = (eventData) => {
+    // const { events } = this.state;
+    onCreateEvent(eventData).then(() => this.fetchEvents());
+  };
+
+  deleteEvent = (id) => {
+    onDeleteEvent(id).then(() => this.fetchEvents());
   };
 
   render() {
     const { weekDates } = this.props;
-
+    console.log(this.state);
     return (
-      <section className="calendar">
+      <section className="calendar ">
         {!this.props.onModal ? null : (
-          <Modal handleDeletefModal={this.props.handleDeletefModal} />
+          <Modal
+            handleDeletefModal={this.props.handleDeletefModal}
+            createEvent={this.createEvent}
+          />
         )}
         <Navigation weekDates={weekDates} />
-        <div className="calendar__body" onClick={this.props.handleOnModal}>
-          <div className="calendar__week-container">
+        <div className="calendar__body " onClick={this.props.handleOnModal}>
+          <div className="calendar__week-container ">
             <Sidebar />
-            <Week weekDates={weekDates} events={this.state.events} />
+            <Week weekDates={weekDates} events={this.state.events} deleteEvent={this.deleteEvent}/>
           </div>
         </div>
       </section>

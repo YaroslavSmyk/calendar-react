@@ -64,7 +64,7 @@ class App extends Component {
         <Calendar
           weekDates={weekDates}
           onModal={this.state.onModal}
-          handleOnModal={this.handleOnModal}
+          // handleOnModal={this.handleOnModal}
           handleDeletefModal={this.handleDeletefModal}
         />
       </>

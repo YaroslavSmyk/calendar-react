@@ -22,9 +22,18 @@ export const generateWeekRange = (startDate) => {
 };
 
 export const getDateTime = (date, time) => {
+  // console.log(date, time)
   const [hours, minutes] = time.split(':');
+  // console.log([hours, minutes])
+
+  // console.log(new Date(date))
+
   const withHours = new Date(new Date(date).setHours(Number(hours)));
+  // console.log(withHours)
+
   const withMinutes = new Date(new Date(withHours).setMinutes(Number(minutes)));
+  // console.log(withMinutes)
+
   return withMinutes;
 };
 
