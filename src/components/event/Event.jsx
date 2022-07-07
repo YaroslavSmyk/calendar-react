@@ -41,7 +41,8 @@ class Event extends Component {
           <button
             className="delete-event-btn"
             onClick={() => this.props.deleteEvent(this.props.id)}
-          >Delete</button>
+          > <i class="fas fa-trash"></i> Delete</button>
+          
         )}
         </>
     );
