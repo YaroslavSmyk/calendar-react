@@ -15,7 +15,7 @@ const Header = ({ weekDates, today, prevWeek, nextWeek, handleOnModal, handleDel
 
 
   return (
-    <header className="header">
+    <header className="header" >
       <button className="button create-event-btn" onClick={handleOnModal}>
         <i className="fas fa-plus create-event-btn__icon" ></i>Create
       </button>

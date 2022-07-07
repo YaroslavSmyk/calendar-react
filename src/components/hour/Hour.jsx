@@ -1,12 +1,12 @@
 import React from 'react';
-
 import Event from '../event/Event';
 import { formatMins } from '../../../src/utils/dateUtils.js';
+import RedLine from './RedLine';
 
-const Hour = ({ dataHour, hourEvents, deleteEvent }) => {
+const Hour = ({ dataHour, hourEvents, deleteEvent, isCurrentTimeSlot }) => {
   return (
     <div className="calendar__time-slot" data-time={dataHour + 1}>
-      {/* if no events in the current hour nothing will render here */}
+      {isCurrentTimeSlot && <RedLine />}
       {hourEvents.map(({ id, dateFrom, dateTo, title }) => {
         const eventStart = `${dateFrom.getHours()}:${formatMins(
           dateFrom.getMinutes()

@@ -25,9 +25,9 @@ export const fetchEventsList = () => {
 export const onDeleteEvent = (id) => {
   return fetch(`${baseUrl}/${id}`, {
     method: 'DELETE',
-  }).then(res => {
-    if(!res.ok) {
-      throw new Error('Couldn`t delete')
+  }).then((res) => {
+    if (!res.ok) {
+      throw new Error('Couldn`t delete');
     }
-  })
-}
+  });
+};

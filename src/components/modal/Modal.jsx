@@ -42,7 +42,7 @@ class Modal extends Component {
       startTime: "",
       endTime: "",
     })
-    // this.props.handleDeletefModal()
+    this.props.handleDeletefModal()
   };
 
   render() {

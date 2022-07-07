@@ -4,7 +4,6 @@ import Modal from '../modal/Modal';
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
 import Sidebar from '../sidebar/Sidebar';
-// import events from '../../gateway/events';
 import {
   fetchEventsList,
   onCreateEvent,
@@ -38,7 +37,6 @@ class Calendar extends Component {
   }
 
   createEvent = (eventData) => {
-    // const { events } = this.state;
     onCreateEvent(eventData).then(() => this.fetchEvents());
   };
 
@@ -48,9 +46,8 @@ class Calendar extends Component {
 
   render() {
     const { weekDates } = this.props;
-    console.log(this.state);
     return (
-      <section className="calendar ">
+      <section className="calendar gray-line">
         {!this.props.onModal ? null : (
           <Modal
             handleDeletefModal={this.props.handleDeletefModal}
@@ -61,7 +58,11 @@ class Calendar extends Component {
         <div className="calendar__body " onClick={this.props.handleOnModal}>
           <div className="calendar__week-container ">
             <Sidebar />
-            <Week weekDates={weekDates} events={this.state.events} deleteEvent={this.deleteEvent}/>
+            <Week
+              weekDates={weekDates}
+              events={this.state.events}
+              deleteEvent={this.deleteEvent}
+            />
           </div>
         </div>
       </section>
