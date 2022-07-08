@@ -3,10 +3,10 @@
 https://splendid-mousse-d51f79.netlify.app/
 
 The tech stack is:
-HTML5
-CSS3
-Flexbox
-Sass (Scss)
+https://en.wikipedia.org/wiki/HTML5
+https://en.wikipedia.org/wiki/CSS
+https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout
+https://sass-lang.com/
 BEM methodology
 React
 
