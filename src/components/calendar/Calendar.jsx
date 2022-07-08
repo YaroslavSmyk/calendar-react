@@ -63,7 +63,7 @@ const Calendar = ({ weekDates, onModal, handleDeletefModal }) => {
   );
 };
 
-Calendar.PropTypes = {
+Calendar.propTypes = {
   weekDates: PropTypes.array.isRequired,
   onModal: PropTypes.bool.isRequired,
   handleDeletefModal: PropTypes.func.isRequired,

@@ -32,7 +32,7 @@ const Day = ({ dataDay, dayEvents, isCurrentTime, deleteEvent }) => {
   );
 };
 
-Day.PropTypes = {
+Day.propTypes = {
   dataDay: PropTypes.number.isRequired,
   dayEvents: PropTypes.array.isRequired,
   isCurrentTime: PropTypes.bool.isRequired,

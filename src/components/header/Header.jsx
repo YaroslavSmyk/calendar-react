@@ -33,7 +33,7 @@ const Header = ({ weekDates, today, prevWeek, nextWeek, handleOnModal }) => {
   );
 };
 
-Header.PropTypes = {
+Header.propTypes = {
   weekDates: PropTypes.array.isRequired,
   today: PropTypes.func.isRequired,
   prevWeek: PropTypes.func.isRequired,

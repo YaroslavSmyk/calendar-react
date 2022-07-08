@@ -34,7 +34,7 @@ const Week = ({ weekDates, events, deleteEvent }) => {
   );
 };
 
-Week.PropTypes = {
+Week.propTypes = {
   weekDates: PropTypes.array.isRequired,
   events: PropTypes.array.isRequired,
   deleteEvent: PropTypes.func.isRequired,

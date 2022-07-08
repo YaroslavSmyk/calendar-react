@@ -33,7 +33,7 @@ const Hour = ({ dataHour, hourEvents, deleteEvent, isCurrentTimeSlot }) => {
   );
 };
 
-Hour.PropTypes = {
+Hour.propTypes = {
   dataHour: PropTypes.number.isRequired,
   hourEvents: PropTypes.array.isRequired,
   deleteEvent: PropTypes.func.isRequired,

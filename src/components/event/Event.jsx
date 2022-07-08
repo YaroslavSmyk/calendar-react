@@ -32,12 +32,12 @@ const Event = ({ id, height, marginTop, time, title, deleteEvent }) => {
     </>
   );
 };
-Event.PropTypes = {
-  id: PropTypes.number.isRequired,
+Event.propTypes = {
+  id: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   marginTop: PropTypes.number.isRequired,
-  time: PropTypes.number.isRequired,
-  title: PropTypes.array.isRequired,
+  time: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   deleteEvent: PropTypes.func.isRequired,
 };
 
