@@ -8,8 +8,6 @@ import {
   fetchEventsList,
   onCreateEvent,
   onDeleteEvent,
-  // fetchEventsList,
-  // onDeleteEvent,
 } from '../../gateway/eventGateway.jsx';
 import './calendar.scss';
 

@@ -2,11 +2,9 @@ import React from 'react';
 import moment from 'moment';
 import './header.scss';
 
-const Header = ({ weekDates, today, prevWeek, nextWeek, handleOnModal, handleDeletefModal }) => {
-  // console.log(weekDates);
+const Header = ({ weekDates, today, prevWeek, nextWeek, handleOnModal }) => {
   const monthOfFirstDayOfWeek = moment(weekDates[0]).format('MMM');
   const monthOfLastDayOfWeek = moment(weekDates[6]).format('MMM');
-  // console.log(firstDayOfWeek, lastDayOfWeek)
   const month =
     monthOfFirstDayOfWeek === monthOfLastDayOfWeek
       ? monthOfFirstDayOfWeek
