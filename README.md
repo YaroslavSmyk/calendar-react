@@ -8,7 +8,7 @@ CSS3
 Flexbox
 Sass (Scss)
 BEM methodology
-[React](https://reactjs.org/)
+# [React](https://reactjs.org/)
 
 Author
 Yaroslav Smyk
