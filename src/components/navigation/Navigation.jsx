@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { days } from '../../utils/dateUtils.js';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const Navigation = ({ weekDates }) => (
   <header className="calendar__header">
@@ -25,5 +26,9 @@ const Navigation = ({ weekDates }) => (
     })}
   </header>
 );
+
+Navigation.propTypes = {
+  weekDates: PropTypes.array.isRequired,
+};
 
 export default Navigation;

@@ -16,7 +16,6 @@ export const onCreateEvent = (eventData) => {
 export const fetchEventsList = () => {
   return fetch(baseUrl).then((res) => {
     if (res.ok) {
-      // console.log(res.json());
       return res.json();
     }
   });
