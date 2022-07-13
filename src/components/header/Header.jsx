@@ -1,8 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import './header.scss';
-import PropTypes from 'prop-types'
-
+import PropTypes from 'prop-types';
 
 const Header = ({ weekDates, today, prevWeek, nextWeek, handleOnModal }) => {
   const monthOfFirstDayOfWeek = moment(weekDates[0]).format('MMM');
@@ -12,15 +11,15 @@ const Header = ({ weekDates, today, prevWeek, nextWeek, handleOnModal }) => {
       ? monthOfFirstDayOfWeek
       : `${monthOfFirstDayOfWeek} - ${monthOfLastDayOfWeek}`;
 
-
-
   return (
-    <header className="header" >
+    <header className="header">
       <button className="button create-event-btn" onClick={handleOnModal}>
-        <i className="fas fa-plus create-event-btn__icon" ></i>Create
+        <i className="fas fa-plus create-event-btn__icon"></i>Create
       </button>
       <div className="navigation">
-        <button className="navigation__today-btn button" onClick={today}>Today</button>
+        <button className="navigation__today-btn button" onClick={today}>
+          Today
+        </button>
         <button className="icon-button navigation__nav-icon" onClick={prevWeek}>
           <i className="fas fa-chevron-left"></i>
         </button>
@@ -39,6 +38,6 @@ Header.propTypes = {
   prevWeek: PropTypes.func.isRequired,
   nextWeek: PropTypes.func.isRequired,
   handleOnModal: PropTypes.func.isRequired,
-}
+};
 
 export default Header;

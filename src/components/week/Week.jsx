@@ -38,6 +38,6 @@ Week.propTypes = {
   weekDates: PropTypes.array.isRequired,
   events: PropTypes.array.isRequired,
   deleteEvent: PropTypes.func.isRequired,
-}
+};
 
 export default Week;

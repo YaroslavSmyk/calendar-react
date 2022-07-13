@@ -1,7 +1,7 @@
 import React from 'react';
 import Hour from '../hour/Hour';
 import './day.scss';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Day = ({ dataDay, dayEvents, isCurrentTime, deleteEvent }) => {
   const hours = Array(24)
@@ -37,6 +37,6 @@ Day.propTypes = {
   dayEvents: PropTypes.array.isRequired,
   isCurrentTime: PropTypes.bool.isRequired,
   deleteEvent: PropTypes.func.isRequired,
-}
+};
 
 export default Day;

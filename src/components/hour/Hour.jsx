@@ -2,7 +2,7 @@ import React from 'react';
 import Event from '../event/Event';
 import { formatMins } from '../../../src/utils/dateUtils.js';
 import RedLine from './RedLine';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Hour = ({ dataHour, hourEvents, deleteEvent, isCurrentTimeSlot }) => {
   return (
@@ -38,6 +38,6 @@ Hour.propTypes = {
   hourEvents: PropTypes.array.isRequired,
   deleteEvent: PropTypes.func.isRequired,
   isCurrentTimeSlot: PropTypes.bool.isRequired,
-}
+};
 
 export default Hour;

@@ -16,7 +16,6 @@ class Modal extends Component {
   onChangeInputInModal = (event) => {
     const { name, value } = event.target;
 
-
     this.setState({
       [name]: value,
     });
@@ -36,13 +35,13 @@ class Modal extends Component {
 
     this.props.createEvent(currentEvent);
     this.setState({
-      title: "",
-      description: "",
-      date: "",
-      startTime: "",
-      endTime: "",
-    })
-    this.props.handleDeletefModal()
+      title: '',
+      description: '',
+      date: '',
+      startTime: '',
+      endTime: '',
+    });
+    this.props.handleDeletefModal();
   };
 
   render() {
