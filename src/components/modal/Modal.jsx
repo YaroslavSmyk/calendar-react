@@ -9,7 +9,7 @@ class Modal extends Component {
     title: '',
     date: moment(new Date()).format('YYYY-MM-DD'),
     startTime: moment(new Date()).format('HH:mm'),
-    endTime: moment(new Date()).format('HH:mm'),
+    endTime: moment(new Date(new Date().setHours(new Date().getHours() + 1))).format('HH:mm'),
     description: '',
   };
 
@@ -41,7 +41,7 @@ class Modal extends Component {
       startTime: '',
       endTime: '',
     });
-    this.props.handleDeletefModal();
+    this.props.handleModalClose();
   };
 
   render() {
@@ -51,7 +51,7 @@ class Modal extends Component {
           <div className="create-event">
             <button
               className="create-event__close-btn"
-              onClick={this.props.handleDeletefModal}
+              onClick={this.props.handleModalClose}
             >
               +
             </button>

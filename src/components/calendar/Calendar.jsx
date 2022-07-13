@@ -11,7 +11,7 @@ import {
 import './calendar.scss';
 import PropTypes from 'prop-types';
 
-const Calendar = ({ weekDates, onModal, handleDeletefModal }) => {
+const Calendar = ({ weekDates, onModal, handleModalClose }) => {
   const [events, setEvents] = useState([]);
 
   const fetchEvents = () => {
@@ -44,7 +44,7 @@ const Calendar = ({ weekDates, onModal, handleDeletefModal }) => {
     <section className="calendar gray-line">
       {!onModal ? null : (
         <Modal
-          handleDeletefModal={handleDeletefModal}
+        handleModalClose={handleModalClose}
           createEvent={createEvent}
         />
       )}
@@ -66,7 +66,7 @@ const Calendar = ({ weekDates, onModal, handleDeletefModal }) => {
 Calendar.propTypes = {
   weekDates: PropTypes.array.isRequired,
   onModal: PropTypes.bool.isRequired,
-  handleDeletefModal: PropTypes.func.isRequired,
+  handleModalClose: PropTypes.func.isRequired,
 };
 
 export default Calendar;

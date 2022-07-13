@@ -23,15 +23,15 @@ const App = () => {
     );
   };
 
-  const today = () => {
+  const getToday = () => {
     setWeekStartDate(new Date());
   };
 
-  const handleOnModal = () => {
+  const handleModalOpen = () => {
     setOnModal(true);
   };
 
-  const handleDeletefModal = () => {
+  const handleModalClose = () => {
     setOnModal(false);
   };
 
@@ -41,13 +41,13 @@ const App = () => {
         weekDates={weekDates}
         nextWeek={nextWeek}
         prevWeek={prevWeek}
-        today={today}
-        handleOnModal={handleOnModal}
+        getToday={getToday}
+        handleModalOpen={handleModalOpen}
       />
       <Calendar
         weekDates={weekDates}
         onModal={onModal}
-        handleDeletefModal={handleDeletefModal}
+        handleModalClose={handleModalClose}
       />
     </>
   );
