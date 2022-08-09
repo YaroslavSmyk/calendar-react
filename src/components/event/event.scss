@@ -40,3 +40,21 @@
 .fa-trash {
   color: grey;
 }
+
+.close-btn__delete {
+  display: flex;
+  margin-left: auto;
+  transform: rotate(45deg) scale(2);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+
+  position: relative;
+  right: -67px;
+  z-index: 3;
+  top: 25px;
+}

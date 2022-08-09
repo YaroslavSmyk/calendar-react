@@ -25,9 +25,18 @@ const Event = ({ id, height, marginTop, time, title, deleteEvent }) => {
         <div className="event__time">{time}</div>
       </div>
       {isVisibleBtn && (
-        <button className="delete-event-btn" onClick={() => deleteEvent(id)}>
-          <i className="fas fa-trash"></i> Delete
-        </button>
+        <div>
+          <button
+            type="button"
+            className="close-btn__delete"
+            onClick={() => setIsVisibleBtn(false)}
+          >
+            +
+          </button>
+          <button className="delete-event-btn" onClick={() => deleteEvent(id)}>
+            <i className="fas fa-trash"></i> Delete
+          </button>
+        </div>
       )}
     </>
   );
@@ -42,4 +51,3 @@ Event.propTypes = {
 };
 
 export default Event;
-
