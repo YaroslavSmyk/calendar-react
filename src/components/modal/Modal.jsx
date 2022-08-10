@@ -9,7 +9,9 @@ class Modal extends Component {
     title: '',
     date: moment(new Date()).format('YYYY-MM-DD'),
     startTime: moment(new Date()).format('HH:mm'),
-    endTime: moment(new Date(new Date().setHours(new Date().getHours() + 1))).format('HH:mm'),
+    endTime: moment(
+      new Date(new Date().setHours(new Date().getHours() + 1))
+    ).format('HH:mm'),
     description: '',
   };
 

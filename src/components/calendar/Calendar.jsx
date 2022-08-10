@@ -43,10 +43,7 @@ const Calendar = ({ weekDates, onModal, handleModalClose }) => {
   return (
     <section className="calendar gray-line">
       {!onModal ? null : (
-        <Modal
-        handleModalClose={handleModalClose}
-          createEvent={createEvent}
-        />
+        <Modal handleModalClose={handleModalClose} createEvent={createEvent} />
       )}
       <Navigation weekDates={weekDates} />
       <div className="calendar__body">

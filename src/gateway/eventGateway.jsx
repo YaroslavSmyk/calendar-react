@@ -9,7 +9,7 @@ export const onCreateEvent = (eventData) => {
     body: JSON.stringify(eventData),
   }).then((res) => {
     if (!res.ok) {
-      throw new Error();
+      throw new Error('Couldn`t create');
     }
   });
 };

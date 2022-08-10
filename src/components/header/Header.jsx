@@ -3,7 +3,13 @@ import moment from 'moment';
 import './header.scss';
 import PropTypes from 'prop-types';
 
-const Header = ({ weekDates, getToday, prevWeek, nextWeek, handleModalOpen }) => {
+const Header = ({
+  weekDates,
+  getToday,
+  prevWeek,
+  nextWeek,
+  handleModalOpen,
+}) => {
   const monthOfFirstDayOfWeek = moment(weekDates[0]).format('MMM');
   const monthOfLastDayOfWeek = moment(weekDates[6]).format('MMM');
   const month =
