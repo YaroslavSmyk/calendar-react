@@ -1,6 +1,6 @@
 # calendar-react
 
-## https://splendid-mousse-d51f79.netlify.app/
+## https://calendar-project-react.netlify.app/
 
 ## The tech stack is:
 ### [HTML5](https://en.wikipedia.org/wiki/HTML5)
